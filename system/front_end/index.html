@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考试系统首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<!--  第一层：div定位：头部信息-->
+<div class="main-container top_bottom">
+<!--        二层放内容-->
+        <div class="top-container">
+<!--            三层具体内容-->
+            <div class="container">
+                <img class="logo" src="image/logo.png" alt="首页logo">
+                <ul class="nav_menu">
+                    <li class="nLi">
+                        <h3>
+                            <a href="index.html">首页</a>
+                        </h3>
+                    </li>
+                    <li class="nLi">
+                        <h3>
+                            <a href="setgame.html">快速出题</a>
+                        </h3>
+                    </li>
+                    <li class="nLi">
+                        <h3>
+                            <a href="#">成为机构</a>
+                        </h3>
+                    </li>
+                    <li class="nLi">
+                        <h3>
+                            <a href="#">登录</a>
+                        </h3>
+                        <ul class="sub">
+                            <li style="display: none">
+                                <a href="#" >注销</a>
+                            </li>
+                            <li style="display: none">
+                                <a href="#" >修改密码</a>
+                            </li>
+                            <li>
+                                <a href="#" id="login-label">密码登录</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+<!--                登录页面 -->
+                <div class="model" id="model">
+                    <div class="model-dialog">
+                        <div class="model-header">
+                            <h2 class="model-title">登录</h2>
+                            <span class="close" id="close">X</span>
+                            <div style="clear: both"></div>
+                            <div class="model-body">
+                                <form action="">
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInId" >邮箱</label>
+                                        <input type="text" id="signInId" placeholder="hugo.zhang@example.com">
+                                    </div>
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInPassword" >密码</label>
+                                        <input type="text" id="signInPassword" placeholder="#p@ssw0rd123.com">
+                                    </div>
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInVcode">验证码</label>
+                                        <input type="text" id="signInVcode" placeholder="请输入验证码">
+                                        <img src="image/yzm.png" alt="验证码图片" style="width: 150px;height:50px ">
+                                    </div>
+
+
+                                </form>
+                            </div>
+                            <div class="model-footer">
+                                <a href="javascript:;" id="resetPassword">忘记密码</a>
+                                <a href="javascript:;" id="signUp">注册</a>
+                                <button class="btn-primary" id="signIn_btn">登录</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                注册页面-->
+                <div class="model" id="signUpModel">
+                    <div class="model-dialog">
+                        <div class="model-header">
+                            <h2 class="model-title">注册</h2>
+                            <span class="close" id="close-signUp">X</span>
+                            <div style="clear: both"></div>
+                            <div class="model-body">
+                                <form action="">
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInId" >邮箱</label>
+                                        <input type="text" id="signInId" placeholder="hugo.zhang@example.com">
+                                    </div>
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInPassword" >密码</label>
+                                        <input type="text" id="signInPassword" placeholder="#p@ssw0rd123.com">
+                                    </div>
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInPasswordAgain" >确认密码</label>
+                                        <input type="text" id="signInPasswordAgain" placeholder="#p@ssw0rd123.com">
+                                    </div>
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInVcode">验证码</label>
+                                        <input type="text" id="signInVcode" placeholder="请输入验证码">
+                                        <img src="image/yzm.png" alt="验证码图片" style="width: 150px;height:50px ">
+                                    </div>
+
+
+                                </form>
+                            </div>
+                            <div class="model-footer">
+                                <a href="#" id="signIn">已有账户，去登陆</a>
+                                <button class="btn-primary">注册</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                忘记密码-->
+                <div class="model" id="resetPasswordModel">
+                    <div class="model-dialog">
+                        <div class="model-header">
+                            <h2 class="model-title">注册</h2>
+                            <span class="close" id="close-reset">X</span>
+                            <div style="clear: both"></div>
+                            <div class="model-body">
+                                <form action="">
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInId" >邮箱</label>
+                                        <input type="text" id="signInId" placeholder="hugo.zhang@example.com">
+                                    </div>
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInPassword" >密码</label>
+                                        <input type="text" id="signInPassword" placeholder="#p@ssw0rd123.com">
+                                    </div>
+                                    <div class="form-group">
+<!--                                        label 中for属性：可以定位到所属input框-->
+                                        <label for="signInPasswordAgain" >确认密码</label>
+                                        <input type="text" id="signInPasswordAgain" placeholder="#p@ssw0rd123.com">
+                                    </div>
+                                    <div class="form-group" style="color: red">
+                                            邮件发送后，请在三十分钟之内登录邮箱确认
+                                    </div>
+
+
+                                </form>
+                            </div>
+                            <div class="model-footer">
+                                <button class="btn-primary">发送邮件</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 第二部分： 轮播图-->
+<div class = "carousel">
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="image/banner2.png" alt="First slide">
+        </div>
+        <div class="item">
+            <img src="image/banner3.png" alt="Second slide">
+        </div>
+        <div class="item">
+            <img src="image/banner4.png" alt="Third slide">
+        </div>
+        <ol class="carousel-indicators">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ol>
+<!--   轮播图左右两边的点击按钮 -->
+<!--        left-->
+<!--         javascript:; 可以让a便签没有任何挑战动作 -->
+        <a href="javascript:;" class="left">
+            <span>&lt;</span>
+        </a>
+<!--        right-->
+        <a href="javascript:;" class="right">
+            <span>&gt;</span>
+        </a>
+    </div>
+</div>
+<!-- 第三部分：比赛分类-->
+<div class="game_class">
+    <div class="container_game">
+        <h2 class="titleh2">
+            <img src="image/icon4.png" alt="logo图片">
+            <span>比赛分类</span>
+        </h2>
+        <div class="row">
+            <div class="cate">
+                    <img class="bc" src="image/layout-icon3.png" alt="layout1">
+                    <p>了解自己 科学规划 激发潜能</p>
+                    <div>热门比赛</div>
+                </div>
+            <div class="cate admin">
+                <img class="bc" src="image/layout-icon1.png" alt="layout1">
+                <p>优化理念 紧跟技术发展趋势</p>
+                <div>技术类</div>
+            </div>
+            <div class="cate teacher">
+                    <img class="bc" src="image/layout-icon2.png" alt="layout1">
+                    <p>提升生涯 引领水平 掌握实操技能</p>
+                    <div>教育类</div>
+                </div>
+            <div class="cate parent">
+                    <img class="bc" src="image/layout-icon4.png" alt="layout1">
+                    <p>掌握动态 增长知识 助力规划未来</p>
+                    <div>文化类</div>
+                </div>
+            <div class="cate admin">
+                    <img class="bc" src="image/layout-icon1.png" alt="layout1">
+                    <p>优化理念 大数据预测发展趋势</p>
+                    <div>体育类</div>
+                </div>
+            <div class="cate parent" >
+                    <img class="bc" src="image/layout-icon4.png" alt="layout1">
+                    <p>掌握动态 增长知识 助力规划未来</p>
+                    <div>常识类</div>
+                </div>
+            <div class="cate">
+                    <img class="bc" src="image/layout-icon3.png" alt="layout1">
+                    <p>了解自己 科学规划 激发潜能</p>
+                    <div>面试题</div>
+                </div>
+<!--            清除浮动造成的影响：-->
+<!--            1、在浮动的最后面添加一个div标签 -->
+<!--            2、给你的标签一个属性：clear：both -->
+            <div class="both" style="clear: both"></div>
+        </div>
+    </div>
+
+</div>
+<!-- 第四部分底部信息 -->
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-nav">
+            <a href="#" class="a_text">首页</a>|
+            <a href="http://www.spoto.net">思博官方官网</a>|
+            <a href="http://www.spoto.net">思博在线教育</a>|
+            <a href="http://www.spoto.net">思博在线大学</a>
+        </div>
+        <div class="copy">福州市思博科技有限公司</div>
+        <div class="copy"> 福ICP备10002740号-2 &nbsp;增值电信业务经营许可证 福B2-20150068</div>
+    </div>
+</div>
+</body>
+</html>
