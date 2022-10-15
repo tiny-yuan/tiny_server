@@ -64,6 +64,14 @@ def do_model(request):
     # 以什么开始：
     # name = BookInfo.objects.filter(btitle__startswith='天')
     # 以什么结束：
-    name = BookInfo.objects.filter(btitle__endswith='湖')
+    # name = BookInfo.objects.filter(btitle__endswith='湖')
+
+    # 空判断：msyql（is /is not）
+    # django: isnull
+    # name = HeroInfo.objects.filter(hname__isnull=False)
+
+    # 范围查询：mysql（in 、between and）
+    # django:in
+    name = BookInfo.objects.filter(id__in=[1, 3])
     print(name)
-    return HttpResponse("ok书名：{} 英雄名：".format(name))
+    return HttpResponse("{}".format(name))
