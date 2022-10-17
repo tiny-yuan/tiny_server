@@ -57,4 +57,4 @@ class HeroInfo(models.Model):
     # 修改显示
     # 默认显示id，我想显示名字
     def __str__(self):
-        return self.hbook
+        return self.hname

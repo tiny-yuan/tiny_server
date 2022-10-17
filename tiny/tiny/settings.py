@@ -73,7 +73,8 @@ ROOT_URLCONF = 'tiny.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 配置模板templates路径
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -155,7 +156,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1", # 安装redis的主机的 IP 和 端口 使用redis1号数据库
+        "LOCATION": "redis://127.0.0.1:6379", # 安装redis的主机的 IP 和 端口 使用redis1号数据库
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient"
             # "CONNECTION_POOL_KWARGS": {

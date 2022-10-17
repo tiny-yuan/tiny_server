@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     # 应用路径
-    path('do_model/', views.do_model)
+    path('do_model/', views.do_model),
+    path('tmp_mysql/', views.tmp_mysql)
 ]
